@@ -10,15 +10,15 @@
 
 ## 下载安装
 
-**大多数用户下载 Windows 安装版即可。** 安装器自动选择 x64 / x86，无需分别找包。当前公开版本为 **0.5.2 预览版**。
+**大多数用户下载 Windows 安装版即可。** 安装器自动选择 x64 / x86，无需分别找包。当前公开版本为 **0.5.3 预览版**。
 
 | 版本 | 下载 | 使用方式 |
 | --- | --- | --- |
-| **Windows 安装版 · 推荐** | [下载安装程序](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.2/ElectricTrace-0.5.2-Windows-Setup.exe) | 按当前用户安装，通过快捷方式启动 |
-| Windows 便携版 | [下载便携 ZIP](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.2/ElectricTrace-0.5.2-Windows-Portable.zip) | 完整解压到可写目录，运行 `电迹.exe`，数据随文件夹保存 |
-| 下载校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.2/SHA256SUMS.txt) | 核对文件是否下载完整 |
+| **Windows 安装版 · 推荐** | [下载安装程序](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Setup.exe) | 按当前用户安装，通过快捷方式启动 |
+| Windows 便携版 | [下载便携 ZIP](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Portable.zip) | 完整解压到可写目录，运行 `电迹.exe`，数据随文件夹保存 |
+| 下载校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/SHA256SUMS.txt) | 核对文件是否下载完整 |
 
-[查看发布页与版本说明](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.2)
+[查看发布页与版本说明](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.3)
 
 面向 Windows 10 1709 及以上版本、Windows 11；完整界面需要 [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48) 和 [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section)。缺少 WebView2 时，可先使用基本界面。系统、架构及硬件读数范围见[兼容说明](docs/COMPATIBILITY.md)。
 
@@ -49,6 +49,12 @@
 ### 桌面悬浮窗
 
 悬浮窗集中显示主要读数，支持拖动、置顶和返回完整窗口。主窗口关闭后收至托盘，后台继续采样；需要结束记录时，从托盘选择“退出”。
+
+### 登录后在后台记录
+
+0.5.3 支持直接从托盘开始采集，打开统计窗口时再加载完整界面。双击托盘图标或普通快捷方式即可查看，记录使用同一进程继续积累。
+
+要随 Windows 登录启动：复制“电迹”快捷方式，在属性的“目标”末尾加上 ` --background`；按 `Win + R`，输入 `shell:startup`，把这个快捷方式放进去。希望同时开启 CPU 增强采集时，再加 ` --cpu`，登录后确认 Windows 权限提示。删除启动文件夹中的快捷方式即可取消自动启动。
 
 ### 按需查看硬件详情
 

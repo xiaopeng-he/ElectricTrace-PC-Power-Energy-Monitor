@@ -8,15 +8,15 @@ See how much power your PC is using, how warm your CPU and GPU are, and how much
 
 ## Download
 
-**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.2 preview**.
+**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.3 preview**.
 
 | Package | Download | How to use it |
 | --- | --- | --- |
-| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.2/ElectricTrace-0.5.2-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
-| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.2/ElectricTrace-0.5.2-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
-| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.2/SHA256SUMS.txt) | Check download integrity |
+| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
+| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
+| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/SHA256SUMS.txt) | Check download integrity |
 
-[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.2)
+[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.3)
 
 Targets Windows 10 version 1709 or later and Windows 11. Requires [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48); the full interface requires [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). A basic native interface is available without WebView2. See [compatibility](docs/COMPATIBILITY.md) for architecture and hardware coverage.
 
@@ -42,6 +42,12 @@ Battery capacity, charging/discharging power, fan speed and additional hardware 
 ![Searchable hardware metrics](assets/metrics.png)
 
 The main window closes to the tray while sampling continues. Hidden main pages are released, and the widget uses a separate page to reduce retained interface resources. Choose **Exit** from the tray to stop recording.
+
+## Start in the background at sign-in
+
+Version 0.5.3 can start directly in the tray, loading the full interface when you open statistics. Double-click the tray icon or launch the ordinary shortcut to open the existing recording session.
+
+To start at Windows sign-in, copy the app shortcut and append ` --background` to its **Target**. Press `Win + R`, enter `shell:startup`, and put the shortcut in that folder. Add ` --cpu` to request enhanced CPU collection and approve the Windows permission prompt after signing in. Remove this shortcut to disable automatic startup.
 
 ## Getting started
 
