@@ -1,0 +1,17 @@
+*
+!.gitignore
+!README.md
+!README.en.md
+!CHANGELOG.md
+!NOTICE.md
+!THIRD-PARTY.md
+!docs/
+!docs/COMPATIBILITY.md
+!docs/PRIVACY.md
+!assets/
+!assets/icon.png
+!assets/overview.png
+!assets/metrics.png
+!.github/
+!.github/ISSUE_TEMPLATE/
+!.github/ISSUE_TEMPLATE/bug_report.yml

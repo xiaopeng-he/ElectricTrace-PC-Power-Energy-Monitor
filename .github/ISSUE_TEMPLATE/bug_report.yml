@@ -1,0 +1,35 @@
+name: 问题反馈 / Bug report
+description: 提供必要环境与复现步骤，请不要上传个人历史或完整日志。
+title: "[问题] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本 / App version
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Windows 版本与架构
+      description: 例如 Windows 11 x64，或 Windows 10 32 位。
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: CPU / GPU 型号
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 怎样复现、期望结果与实际结果
+      description: 只贴必要的脱敏错误文字；不要附完整 data、数据库、备份、配置或 session.dat。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 数据检查
+      options:
+        - label: 我已检查内容，不包含个人历史、会话凭证或敏感路径。
+          required: true
