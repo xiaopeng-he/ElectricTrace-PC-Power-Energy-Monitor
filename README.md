@@ -10,15 +10,15 @@
 
 ## 下载安装
 
-**大多数用户下载 Windows 安装版即可。** 安装器自动选择 x64 / x86，无需分别找包。当前公开版本为 **0.5.3 预览版**。
+**大多数用户下载 Windows 安装版即可。** 安装器自动选择 x64 / x86，无需分别找包。当前公开版本为 **0.5.4 预览版**。
 
 | 版本 | 下载 | 使用方式 |
 | --- | --- | --- |
-| **Windows 安装版 · 推荐** | [下载安装程序](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Setup.exe) | 按当前用户安装，通过快捷方式启动 |
-| Windows 便携版 | [下载便携 ZIP](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Portable.zip) | 完整解压到可写目录，运行 `电迹.exe`，数据随文件夹保存 |
-| 下载校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/SHA256SUMS.txt) | 核对文件是否下载完整 |
+| **Windows 安装版 · 推荐** | [下载安装程序](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.4/ElectricTrace-0.5.4-Windows-Setup.exe) | 按当前用户安装，通过快捷方式启动 |
+| Windows 便携版 | [下载便携 ZIP](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.4/ElectricTrace-0.5.4-Windows-Portable.zip) | 完整解压到可写目录，运行 `电迹.exe`，数据随文件夹保存 |
+| 下载校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.4/SHA256SUMS.txt) | 核对文件是否下载完整 |
 
-[查看发布页与版本说明](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.3)
+[查看发布页与版本说明](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.4)
 
 面向 Windows 10 1709 及以上版本、Windows 11；完整界面需要 [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48) 和 [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section)。缺少 WebView2 时，可先使用基本界面。系统、架构及硬件读数范围见[兼容说明](docs/COMPATIBILITY.md)。
 
@@ -52,9 +52,9 @@
 
 ### 登录后在后台记录
 
-0.5.3 支持直接从托盘开始采集，打开统计窗口时再加载完整界面。双击托盘图标或普通快捷方式即可查看，记录使用同一进程继续积累。
+0.5.4 支持直接从托盘开始采集，打开统计窗口时再加载完整界面。双击托盘图标或普通快捷方式即可查看，记录使用同一进程继续积累。
 
-要随 Windows 登录启动：复制“电迹”快捷方式，在属性的“目标”末尾加上 ` --background`；按 `Win + R`，输入 `shell:startup`，把这个快捷方式放进去。希望同时开启 CPU 增强采集时，再加 ` --cpu`，登录后确认 Windows 权限提示。删除启动文件夹中的快捷方式即可取消自动启动。
+要随 Windows 登录启动：复制“电迹”快捷方式，在属性的“目标”末尾加上 ` --background`；按 `Win + R`，输入 `shell:startup`，把这个快捷方式放进去。希望同时开启 CPU 增强采集时，再加 ` --cpu`。安装版可先从托盘右键 **CPU 登录自动采集 → 启用（首次授权）** 完成一次管理员配置，之后启动和重连无需逐次确认。删除启动文件夹中的快捷方式即可取消自动启动。
 
 ### 按需查看硬件详情
 
@@ -69,7 +69,7 @@
 ## 快速上手
 
 1. **安装并启动。** 安装版运行下载的 EXE；便携版完整解压后双击 `电迹.exe`。
-2. **开启 CPU 增强采集。** 在应用中开启增强采集，并确认 Windows 权限提示，用于读取 CPU 封装功率和温度。增强采集使用已有的兼容 PawnIO 驱动；具体准备见[兼容说明](docs/COMPATIBILITY.md#可读取哪些传感器)。
+2. **开启 CPU 增强采集。** 在应用中读取 CPU 封装功率和温度。安装版托盘右键“CPU 登录自动采集→启用”可完成一次管理员配置，之后自动连接；也可保留逐次确认方式。增强采集使用已有的兼容 PawnIO 驱动；具体准备见[兼容说明](docs/COMPATIBILITY.md#可读取哪些传感器)。
 3. **选择你关心的读数。** 日常看实时监控；需要持续关注时打开悬浮窗；查找单项数据时进入硬件详情。
 4. **设置电价与采样间隔。** 在设置中填写实际电价。默认每 2 秒记录一次，可在 1–30 秒之间调整。
 5. **积累并查看历史。** 运行一段时间后，在历史记录中选择日期和统计口径，查看耗电量或导出 CSV。

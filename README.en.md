@@ -8,15 +8,15 @@ See how much power your PC is using, how warm your CPU and GPU are, and how much
 
 ## Download
 
-**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.3 preview**.
+**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.4 preview**.
 
 | Package | Download | How to use it |
 | --- | --- | --- |
-| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
-| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/ElectricTrace-0.5.3-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
-| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.3/SHA256SUMS.txt) | Check download integrity |
+| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.4/ElectricTrace-0.5.4-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
+| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.4/ElectricTrace-0.5.4-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
+| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.4/SHA256SUMS.txt) | Check download integrity |
 
-[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.3)
+[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.4)
 
 Targets Windows 10 version 1709 or later and Windows 11. Requires [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48); the full interface requires [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). A basic native interface is available without WebView2. See [compatibility](docs/COMPATIBILITY.md) for architecture and hardware coverage.
 
@@ -45,14 +45,14 @@ The main window closes to the tray while sampling continues. Hidden main pages a
 
 ## Start in the background at sign-in
 
-Version 0.5.3 can start directly in the tray, loading the full interface when you open statistics. Double-click the tray icon or launch the ordinary shortcut to open the existing recording session.
+Version 0.5.4 can start directly in the tray, loading the full interface when you open statistics. Double-click the tray icon or launch the ordinary shortcut to open the existing recording session.
 
-To start at Windows sign-in, copy the app shortcut and append ` --background` to its **Target**. Press `Win + R`, enter `shell:startup`, and put the shortcut in that folder. Add ` --cpu` to request enhanced CPU collection and approve the Windows permission prompt after signing in. Remove this shortcut to disable automatic startup.
+To start at Windows sign-in, copy the app shortcut and append ` --background` to its **Target**. Press `Win + R`, enter `shell:startup`, and put the shortcut in that folder. Add ` --cpu` to request enhanced CPU collection. Installed copies offer **CPU 登录自动采集 → 启用（首次授权）** in the tray menu: approve administrator setup once, then collection starts and reconnects through the authorized task without repeated prompts. Remove this shortcut to disable automatic startup.
 
 ## Getting started
 
 1. Install and launch the app, or extract the portable ZIP and run `电迹.exe`.
-2. Enable enhanced CPU collection and approve the Windows permission prompt to read package power and temperature. It uses an existing compatible PawnIO driver; see [sensor compatibility](docs/COMPATIBILITY.md).
+2. Enable enhanced CPU collection to read package power and temperature. Installed copies can authorize the tray option **CPU 登录自动采集** once; the regular prompt-based mode remains available. It uses an existing compatible PawnIO driver; see [sensor compatibility](docs/COMPATIBILITY.md).
 3. Open the live monitor, enable the widget, or use hardware details to find a particular metric.
 4. Set your electricity price. The default sampling interval is two seconds, adjustable from 1 to 30 seconds.
 5. Open history to select a date range and measurement scope, or export readings as CSV.
