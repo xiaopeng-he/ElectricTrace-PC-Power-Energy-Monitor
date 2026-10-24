@@ -1,4 +1,4 @@
-# ElectricTrace
+# ElectricTrace · PC Power & Energy Monitor · PC Power & Energy Monitor
 
 A Windows desktop monitor for CPU/GPU power, temperatures and energy trends, with a floating widget and a full statistics window. Data stays on the local machine.
 
@@ -6,9 +6,9 @@ A Windows desktop monitor for CPU/GPU power, temperatures and energy trends, wit
 
 This repository distributes documentation and packaged binaries. The application's proprietary source code remains private. **0.5.0 is a preview**, with ongoing compatibility, long-term performance and release validation.
 
-- [Windows installer](https://github.com/xiaopeng-he/ElectricTrace/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Setup.exe): automatically selects x64 or x86.
-- [Windows portable ZIP](https://github.com/xiaopeng-he/ElectricTrace/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Portable.zip): extract the complete archive into a writable folder and run `电迹.exe`.
-- [SHA256 checksums](https://github.com/xiaopeng-he/ElectricTrace/releases/download/v0.5.0/SHA256SUMS.txt).
+- [Windows installer](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Setup.exe): automatically selects x64 or x86.
+- [Windows portable ZIP](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Portable.zip): extract the complete archive into a writable folder and run `电迹.exe`.
+- [SHA256 checksums](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/SHA256SUMS.txt).
 
 Requires .NET Framework 4.8+; the full UI requires WebView2 Runtime 120+. A basic native UI is available without WebView2. The current host validation is Windows 11 x64 and WOW64; Windows 10 and ARM devices need further validation. Windows 7/8/XP are unsupported. No macOS or Linux package is currently available.
 

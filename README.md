@@ -1,26 +1,24 @@
 <p align="center"><img src="assets/icon.png" width="80" alt="电迹图标"></p>
 
-# 电迹 · ElectricTrace
+# 电迹 · 电脑功耗与耗电量监控
 
-在 Windows 上查看电脑的功耗、温度与耗电趋势。提供桌面悬浮窗和完整统计窗口，读数、设置和历史保存在本机。
+**ElectricTrace PC Power & Energy Monitor**
 
-[English](README.en.md) · [下载安装](#下载安装) · [兼容范围](docs/COMPATIBILITY.md) · [更新记录](CHANGELOG.md) · [反馈问题](https://github.com/xiaopeng-he/ElectricTrace/issues)
+看看电脑现在用了多少功率、CPU/GPU 有多热、今天消耗了多少电。提供桌面悬浮窗、实时曲线和完整统计，数据保存在本机，无需外接设备。
 
-本仓库提供文档和封装安装包，自有源码保持私有。当前 **0.5.0 为预览版**，仍在完善兼容性、长期性能与商业交付流程。
+[English](README.en.md) · [下载安装](#下载安装) · [兼容范围](docs/COMPATIBILITY.md) · [更新记录](CHANGELOG.md) · [反馈问题](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/issues)
 
-![电迹石墨界面示意](assets/overview.png)
-
-*图片使用示例数据展示界面。实际读数取决于你的硬件、驱动和权限；未提供的指标显示“—”。*
+**普通用户选择 Windows 安装版即可，软件会自动匹配 x64 / x86。** 当前 **0.5.0 为预览版**。
 
 ## 下载安装
 
 | 选择 | 下载 | 适合谁 |
 | --- | --- | --- |
-| **Windows 安装版（推荐）** | [ElectricTrace-0.5.0-Windows-Setup.exe](https://github.com/xiaopeng-he/ElectricTrace/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Setup.exe) | 普通使用；按当前用户安装，自动选择 x64 / x86 |
-| Windows 便携版 | [ElectricTrace-0.5.0-Windows-Portable.zip](https://github.com/xiaopeng-he/ElectricTrace/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Portable.zip) | 希望完整解压后运行，数据保存在软件旁边 |
-| 文件校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace/releases/download/v0.5.0/SHA256SUMS.txt) | 核对下载是否完整；校验值不替代发布者签名 |
+| **Windows 安装版（推荐）** | [ElectricTrace-0.5.0-Windows-Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Setup.exe) | 普通使用；按当前用户安装，自动选择 x64 / x86 |
+| Windows 便携版 | [ElectricTrace-0.5.0-Windows-Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Portable.zip) | 希望完整解压后运行，数据保存在软件旁边 |
+| 文件校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/SHA256SUMS.txt) | 核对下载是否完整；校验值不替代发布者签名 |
 
-[查看全部发布资产](https://github.com/xiaopeng-he/ElectricTrace/releases/tag/v0.5.0)
+[查看全部发布资产](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.0)
 
 **32 位 Windows 也使用同一个安装器。** 软件内含两套程序并自动选取，不需要猜测。当前没有 macOS / Linux 安装包；Windows ARM 的范围见[兼容说明](docs/COMPATIBILITY.md)。
 
@@ -29,6 +27,10 @@
 3. 需要 CPU 温度与封装功耗时，在应用中开启 CPU 增强采集，由你确认 Windows 权限提示。其他可用指标会继续显示。
 
 预览包尚未使用可信证书签名，Windows 可能显示“未知发布者”。请从本仓库 Release 下载并核对校验值，保持系统防护开启。
+
+![电迹石墨界面示意](assets/overview.png)
+
+*图片使用示例数据展示界面。实际读数取决于你的硬件、驱动和权限；未提供的指标显示“—”。*
 
 ## 日常使用
 
@@ -78,6 +80,6 @@ NVIDIA 优先读取已有驱动的 NVML；其他显卡依赖硬件库提供的�
 
 当前仍为持续改进的预览版。新界面经过隔离浏览器和指标契约测试；采集、数据保留、故障恢复与受保护程序集分别验证。新版本尚未在所有真实账户、Windows 版本和硬件上完成验收，也未完成实际断电及长期资源认证。
 
-反馈时请说明应用版本、Windows 版本、x64 / x86 / ARM、CPU / GPU 型号及复现步骤。请只提供脱敏错误文字，不上传完整 `data`、历史数据库、备份或 `session.dat`。[提交问题](https://github.com/xiaopeng-he/ElectricTrace/issues/new/choose)。
+反馈时请说明应用版本、Windows 版本、x64 / x86 / ARM、CPU / GPU 型号及复现步骤。请只提供脱敏错误文字，不上传完整 `data`、历史数据库、备份或 `session.dat`。[提交问题](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/issues/new/choose)。
 
 自有程序保持闭源，第三方组件的许可和源码来源见 [THIRD-PARTY.md](THIRD-PARTY.md) 及安装包 `licenses`。当前未发布自有源码的开源授权；商业授权与支持条款会另行说明。
