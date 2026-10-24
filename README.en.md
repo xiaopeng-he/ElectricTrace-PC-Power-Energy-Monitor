@@ -8,15 +8,15 @@ See how much power your PC is using, how warm your CPU and GPU are, and how much
 
 ## Download
 
-**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.0 preview**.
+**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.1 preview**.
 
 | Package | Download | How to use it |
 | --- | --- | --- |
-| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
-| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/ElectricTrace-0.5.0-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
-| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.0/SHA256SUMS.txt) | Check download integrity |
+| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.1/ElectricTrace-0.5.1-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
+| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.1/ElectricTrace-0.5.1-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
+| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.1/SHA256SUMS.txt) | Check download integrity |
 
-[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.0)
+[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.1)
 
 Targets Windows 10 version 1709 or later and Windows 11. Requires [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48); the full interface requires [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). A basic native interface is available without WebView2. See [compatibility](docs/COMPATIBILITY.md) for architecture and hardware coverage.
 
