@@ -8,15 +8,15 @@ See how much power your PC is using, how warm your CPU and GPU are, and how much
 
 ## Download
 
-**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.6 preview**.
+**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.7 preview**.
 
 | Package | Download | How to use it |
 | --- | --- | --- |
-| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.6/ElectricTrace-0.5.6-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
-| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.6/ElectricTrace-0.5.6-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
-| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.6/SHA256SUMS.txt) | Check download integrity |
+| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.7/ElectricTrace-0.5.7-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
+| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.7/ElectricTrace-0.5.7-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
+| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.7/SHA256SUMS.txt) | Check download integrity |
 
-[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.6)
+[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.7)
 
 Targets Windows 10 version 1709 or later and Windows 11. Requires [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48); the full interface requires [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). A basic native interface is available without WebView2. See [compatibility](docs/COMPATIBILITY.md) for architecture and hardware coverage.
 
@@ -47,7 +47,9 @@ The main window closes to the tray while sampling continues. Hidden main pages a
 
 ## Start in the background at sign-in
 
-Version 0.5.6 can start directly in the tray, loading the full interface when you open statistics. Double-click the tray icon or launch the ordinary shortcut to open the existing recording session.
+ElectricTrace can start directly in the tray, loading the full interface when you open statistics. Double-click the tray icon or launch the ordinary shortcut to open the existing recording session.
+
+Since 0.5.7, the launcher attempts to recover background collection if the main process exits unexpectedly and records its exit and recovery. Choosing **Exit** keeps the app closed.
 
 To start at Windows sign-in, copy the app shortcut and append ` --background` to its **Target**. Press `Win + R`, enter `shell:startup`, and put the shortcut in that folder. Add ` --cpu` to request enhanced CPU collection. Installed copies offer **CPU 登录自动采集 → 启用（首次授权）** in the tray menu: approve administrator setup once, then collection starts and reconnects through the authorized task without repeated prompts. Remove this shortcut to disable automatic startup.
 
@@ -80,6 +82,8 @@ The installer stores data in `%LOCALAPPDATA%\ElectricTrace\data`. Portable copie
 
 Create an `.etbackup` under **Settings → Data and operation** to save recorded history and settings while sampling continues. Restoring validates the backup and asks for confirmation before restarting; previous files are kept in `restore-points`.
 
+The first successful recording each day creates an `.etbackup` in the actual data folder’s `auto-backups` directory. The seven most recent automatic backups are retained; manual backups and restore points are kept separately. Select one through **Settings → Data and operation → Restore backup**. An established profile whose database is missing opens recovery guidance instead of silently starting empty history.
+
 Create a backup before upgrading. Keep the complete folder, including `data`, when moving a portable copy. Uninstalling an installed copy retains its data. Databases, exports and backups are ordinary local files; handle them as personal records. See [privacy](docs/PRIVACY.md).
 
 ## Common questions
@@ -89,6 +93,8 @@ Create a backup before upgrading. Keep the complete folder, including `data`, wh
 **Why is a metric unavailable?** Hardware, drivers and permissions determine which sensors are exposed. Enable enhanced collection for CPU power and temperature; other available metrics continue recording.
 
 **Why is there a gap in a chart?** No valid reading was recorded for that interval. Check the collection status, reconnect enhanced CPU collection if needed, or resume paused recording. New samples continue the history while the earlier gap remains visible.
+
+**Where are my earlier records?** History shows the saved date range and offers a direct action to open existing CPU + GPU records. Check both the dates and scope: estimated-system records begin when estimation is enabled. Version 0.5.7 also uses a shared desktop data context when launched from an isolated tool.
 
 **Why does Windows show an unknown publisher?** The preview package is not yet signed with a trusted code-signing certificate. Download from this project's [Releases](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases), use the checksums to check integrity, and keep Windows protection enabled.
 
