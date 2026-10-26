@@ -1,0 +1,22 @@
+# ElectricTrace preview binary license
+
+Copyright (c) 2026 xiaopeng-he, for the original ElectricTrace software and repository materials.
+All rights reserved except as expressly granted below.
+
+## Personal preview use
+
+Permission is granted to download, install and run the maintainer's officially published, unmodified ElectricTrace preview binaries on your own devices for personal, non-commercial use. You may make backup copies for that use. Keep the accompanying copyright, attribution, license and third-party notices intact.
+
+This permission does not grant rights to sell, sublicense, commercially host, commercially distribute, or redistribute the maintainer's proprietary software, modified builds, branding or repository artwork. Other uses require separate written permission from the relevant rights holder. Commercial authorization and support may be offered separately; a later offer does not itself change these terms for a copy already received under this license.
+
+## Source and third-party components
+
+The maintainer's own application source remains private; no open-source license to that source is granted. Repository documentation may be read for installing, operating and evaluating ElectricTrace. Other reproduction or redistribution of the maintainer's original repository material requires separate permission, except as allowed by law or GitHub's applicable terms.
+
+Third-party components remain under their respective licenses. Their rights, including any source-code rights, are not restricted by this license. See NOTICE.md, THIRD-PARTY.md and the license files distributed with the application. Existing third-party notices must be retained. This license grants no rights to third-party trademarks or software beyond the rights those parties grant.
+
+## Warranty and liability
+
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE AND MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE AUTHORS AND RIGHTS HOLDERS ARE NOT LIABLE FOR DAMAGES ARISING FROM THEIR USE, EXCEPT WHERE LIABILITY CANNOT LAWFULLY BE EXCLUDED.
+
+For additional permissions, contact the repository maintainer through https://github.com/xiaopeng-he.
