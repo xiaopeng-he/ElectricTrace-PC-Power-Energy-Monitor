@@ -8,15 +8,15 @@ See how much power your PC is using, how warm your CPU and GPU are, and how much
 
 ## Download
 
-**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.7 preview**.
+**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.8 preview**.
 
 | Package | Download | How to use it |
 | --- | --- | --- |
-| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.7/ElectricTrace-0.5.7-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
-| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.7/ElectricTrace-0.5.7-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
-| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.7/SHA256SUMS.txt) | Check download integrity |
+| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.8/ElectricTrace-0.5.8-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
+| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.8/ElectricTrace-0.5.8-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
+| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.8/SHA256SUMS.txt) | Check download integrity |
 
-[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.7)
+[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.8)
 
 Targets Windows 10 version 1709 or later and Windows 11. Requires [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48); the full interface requires [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). A basic native interface is available without WebView2. See [compatibility](docs/COMPATIBILITY.md) for architecture and hardware coverage.
 
@@ -58,7 +58,7 @@ Measurements use the selected CPU, GPU or combined hardware scope and capture th
 ## Getting started
 
 1. Install and launch the app, or extract the portable ZIP and run `电迹.exe`.
-2. Enable enhanced CPU collection to read package power and temperature. Installed copies can authorize the tray option **CPU 登录自动采集** once; the regular prompt-based mode remains available. It uses an existing compatible PawnIO driver; see [sensor compatibility](docs/COMPATIBILITY.md).
+2. Open **Settings → Sensor collection** to enable CPU package power and temperature readings. If PawnIO is missing, install the signed edition and select **Enable readings**. Windows handles manual authorization. The same page shows the result. [Official PawnIO website](https://pawnio.eu/)
 3. Open the live monitor, enable the widget, or use hardware details to find a particular metric.
 4. Set your electricity price. The default sampling interval is two seconds, adjustable from 1 to 30 seconds.
 5. Open history to select a date range and measurement scope, or export readings as CSV.
