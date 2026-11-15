@@ -10,15 +10,15 @@
 
 ## 下载安装
 
-**大多数用户下载 Windows 安装版即可。** 安装器自动选择 x64 / x86，无需分别找包。当前公开版本为 **0.5.9 预览版**。
+**大多数用户下载 Windows 安装版即可。** 安装器自动选择 x64 / x86。当前公开版本为 **0.5.10 预览版**。
 
 | 版本 | 下载 | 使用方式 |
 | --- | --- | --- |
-| **Windows 安装版 · 推荐** | [下载安装程序](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.9/ElectricTrace-0.5.9-Windows-Setup.exe) | 按当前用户安装，通过快捷方式启动 |
-| Windows 便携版 | [下载便携 ZIP](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.9/ElectricTrace-0.5.9-Windows-Portable.zip) | 完整解压到可写目录，运行 `电迹.exe`，数据随文件夹保存 |
-| 下载校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.9/SHA256SUMS.txt) | 核对文件是否下载完整 |
+| **Windows 安装版 · 推荐** | [下载安装程序](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.10/ElectricTrace-0.5.10-Windows-Setup.exe) | 按当前用户安装，通过快捷方式启动 |
+| Windows 便携版 | [下载便携 ZIP](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.10/ElectricTrace-0.5.10-Windows-Portable.zip) | 完整解压到可写目录，运行 `电迹.exe`，数据随文件夹保存 |
+| 下载校验 | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.10/SHA256SUMS.txt) | 核对文件是否下载完整 |
 
-[查看发布页与版本说明](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.9)
+[查看发布页与版本说明](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.10)
 
 面向 Windows 10 1709 及以上版本、Windows 11；完整界面需要 [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48) 和 [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section)。缺少 WebView2 时，可先使用基本界面。系统、架构及硬件读数范围见[兼容说明](docs/COMPATIBILITY.md)。
 
@@ -137,7 +137,7 @@ Windows x64 和 32 位 x86 都下载同一个安装版或便携版，程序自�
 
 ### 为什么曲线会出现空白？
 
-0.5.9 会排除超出合理范围的功率。升级时会保留原始异常值，受影响且无法可靠重算的旧累计从统计中排除，历史页会标明。
+超过 1,000 W 的功率按缺测处理。CPU、GPU、电池充放电、部件合计和整机估算都使用这个上限。升级时会保留旧记录中的异常原值，历史页会标明因异常而排除的旧累计。
 
 空白表示该时段没有有效读数。先查看页面的采集状态：CPU 增强采集断开时可重新连接；记录暂停时可按提示恢复。重新采样后继续积累，历史空档保留。
 

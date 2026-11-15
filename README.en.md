@@ -8,15 +8,15 @@ See how much power your PC is using, how warm your CPU and GPU are, and how much
 
 ## Download
 
-**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.9 preview**.
+**Choose the Windows installer for everyday use.** One download automatically selects x64 or x86. The current public release is **0.5.10 preview**.
 
 | Package | Download | How to use it |
 | --- | --- | --- |
-| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.9/ElectricTrace-0.5.9-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
-| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.9/ElectricTrace-0.5.9-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
-| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.9/SHA256SUMS.txt) | Check download integrity |
+| **Windows installer · Recommended** | [Download Setup.exe](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.10/ElectricTrace-0.5.10-Windows-Setup.exe) | Install for your Windows account and launch from the shortcut |
+| Windows portable | [Download Portable.zip](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.10/ElectricTrace-0.5.10-Windows-Portable.zip) | Extract the complete archive into a writable folder, then run `电迹.exe` |
+| Checksums | [SHA256SUMS.txt](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/download/v0.5.10/SHA256SUMS.txt) | Check download integrity |
 
-[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.9)
+[Release page and notes](https://github.com/xiaopeng-he/ElectricTrace-PC-Power-Energy-Monitor/releases/tag/v0.5.10)
 
 Targets Windows 10 version 1709 or later and Windows 11. Requires [.NET Framework 4.8+](https://dotnet.microsoft.com/download/dotnet-framework/net48); the full interface requires [WebView2 Runtime 120+](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). A basic native interface is available without WebView2. See [compatibility](docs/COMPATIBILITY.md) for architecture and hardware coverage.
 
@@ -92,7 +92,7 @@ Create a backup before upgrading. Keep the complete folder, including `data`, wh
 
 **Why is a metric unavailable?** Hardware, drivers and permissions determine which sensors are exposed. Enable enhanced collection for CPU power and temperature; other available metrics continue recording.
 
-**Why is there a gap in a chart?** ElectricTrace 0.5.9 omits out-of-range power. On upgrade, affected old totals are set aside when they cannot be reliably reconstructed. History shows when this happened. No valid reading was recorded for that interval. Check the collection status, reconnect enhanced CPU collection if needed, or resume paused recording. New samples continue the history while the earlier gap remains visible.
+**Why is there a gap in a chart?** A gap marks an interval with no valid reading. ElectricTrace omits power above 1,000 W for CPU, GPU, battery, combined component power, and estimated system power. On upgrade, History identifies older totals that were excluded because they include invalid power. Check the collection status, reconnect enhanced CPU collection if needed, or resume paused recording.
 
 **Where are my earlier records?** History shows the saved date range and offers a direct action to open existing CPU + GPU records. Check both the dates and scope: estimated-system records begin when estimation is enabled. Version 0.5.7 also uses a shared desktop data context when launched from an isolated tool.
 
